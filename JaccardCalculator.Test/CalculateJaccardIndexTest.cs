@@ -49,6 +49,15 @@ namespace JaccardCalculator.Test
             Assert.AreEqual(0.33, jaccardIndex);
         }
         
+        [Test]
+        public void CalculateJaccardDistance_HalfwayDifferent()
+        {
+            var aSet = new[] {0, 1, 2, 5, 6};
+            var bSet = new[] {0, 2, 3, 4, 5, 7, 9};
+            var jaccardIndex = JaccardIndex.CalculateJaccardDistance(aSet, bSet);
+
+            Assert.AreEqual( 1 - 0.33, jaccardIndex);
+        }
         
         [Test]
         public void CalculateJaccardIndex_DifferentOrder_ExpectSameJaccardIndex()

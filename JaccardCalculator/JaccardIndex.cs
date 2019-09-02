@@ -6,6 +6,11 @@ namespace JaccardCalculator
 {
     public static class JaccardIndex
     {
+        public static double CalculateJaccardDistance<T>(ICollection<T> a, ICollection<T> b)
+        {
+            return 1 - CalculateJaccardIndex(a, b);
+        }
+        
         public static double CalculateJaccardIndex<T>(ICollection<T> a, ICollection<T> b)
         {
             CheckInput(a, b);
