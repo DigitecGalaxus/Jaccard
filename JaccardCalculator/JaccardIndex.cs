@@ -13,7 +13,7 @@ namespace JaccardCalculator
             var intersectionCount = a.Intersect(b).Count();
             var unionCount = a.Union(b).Count();
 
-            var jaccardIndex = (intersectionCount / (double) unionCount) * 100;
+            var jaccardIndex = (intersectionCount / (double) unionCount);
             return Math.Round(jaccardIndex, 2);
         }
 

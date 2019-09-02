@@ -26,7 +26,7 @@ namespace JaccardCalculator.Test
             var bSet = new[] {1};
             var jaccardIndex = JaccardIndex.CalculateJaccardIndex(aSet, bSet);
 
-            Assert.AreEqual(100.0, jaccardIndex);
+            Assert.AreEqual(1, jaccardIndex);
         }
 
         [Test]
@@ -46,7 +46,7 @@ namespace JaccardCalculator.Test
             var bSet = new[] {0, 2, 3, 4, 5, 7, 9};
             var jaccardIndex = JaccardIndex.CalculateJaccardIndex(aSet, bSet);
 
-            Assert.AreEqual(33.33, jaccardIndex);
+            Assert.AreEqual(0.33, jaccardIndex);
         }
         
         
@@ -58,7 +58,7 @@ namespace JaccardCalculator.Test
             
             var jaccardIndex = JaccardIndex.CalculateJaccardIndex(aSet, bSet);
 
-            Assert.AreEqual(100.00, jaccardIndex);
+            Assert.AreEqual(1, jaccardIndex);
         }
     }
 }
