@@ -4,7 +4,8 @@ using NUnit.Framework;
 
 namespace JaccardCalculator.Test
 {
-    public class Tests
+    [TestFixture]
+    public class JaccardIndexTest
     {
         [Test]
         public void CalculateJaccardIndex_ExpectArgumentException()
