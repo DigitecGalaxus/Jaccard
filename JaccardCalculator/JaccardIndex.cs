@@ -15,6 +15,16 @@ namespace JaccardCalculator
         {
             CheckInput(a, b);
 
+            if ((a.Count > 0 && b.Count == 0) || (a.Count == 0 && b.Count > 0))
+            {
+                return 0;
+            }
+            
+            if(a.Count == 0 && b.Count == 0)
+            {
+                return 1;
+            }
+
             var intersectionCount = a.Intersect(b).Count();
             var unionCount = a.Union(b).Count();
 
