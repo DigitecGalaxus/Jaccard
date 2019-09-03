@@ -22,24 +22,32 @@ namespace JaccardCalculator
             return Math.Round(jaccardIndex, 2);
         }
 
+        public static double CalculateMeanJaccardDistance<T>(ICollection<T> a, ICollection<T> b)
+        {
+            return Math.Round(1 - CalculateMeanJaccardIndex(a, b), 2);
+        }
+
         public static double CalculateMeanJaccardIndex<T>(ICollection<T> a, ICollection<T> b)
         {
+            CheckInput(a, b);
+            
             var aLength = a.Count;
             var bLength = b.Count;
             var maxIndex = Math.Max(aLength, bLength);
 
             var meanJaccardIndex = Enumerable
-                .Range(1, maxIndex - 1)
+                .Range(0, maxIndex)
                 .Select(i =>
                 {
-                    var aSliced = a.Take(i).ToArray();
-                    var bSliced = b.Take(i).ToArray();
+                    var takeCount = i + 1;
+                    var aSliced = a.Take(takeCount).ToArray();
+                    var bSliced = b.Take(takeCount).ToArray();
                     var jaccardIndex = CalculateJaccardIndex(aSliced, bSliced);
                     return jaccardIndex;
                 })
                 .Average();
             
-            return meanJaccardIndex;
+            return Math.Round(meanJaccardIndex, 2);
         }
         
         private static void CheckInput<T>(ICollection<T> a, ICollection<T> b)
