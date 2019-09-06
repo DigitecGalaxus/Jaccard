@@ -1,8 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <RootNamespace>JaccardIndex</RootNamespace>
+        <RootNamespace>JaccardIndex</RootNamespace>        
         <TargetFrameworks>netstandard2.0;netcoreapp2.2</TargetFrameworks>
+        <PackageId>JaccardIndex</PackageId>
+        <Version>0.9</Version>
+        <Authors>Zenit Kovačević</Authors>
+        <PackageDescription>
+            A small evaluation tool to calculate the jaccard similarity index and distance. 
+            It also includes mean jaccard index and distance 
+            which considers the order of the elements as well. 
+        </PackageDescription>
+        <PackageTags>jaccard;jaccard index;jaccard distance;mean jaccard index;mean jaccard index;jaccard coefficient;jaccard similarity index</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
 </Project>
