@@ -12,6 +12,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageVersion>1.0.0</PackageVersion>
         <RepositoryUrl>https://github.com/ZenitK/Jaccard</RepositoryUrl>
+        <PackageLicenseUrl>https://github.com/ZenitK/Jaccard/blob/master/LICENSE.md</PackageLicenseUrl>
     </PropertyGroup>
 
 </Project>
